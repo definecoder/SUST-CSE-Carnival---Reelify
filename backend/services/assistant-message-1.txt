@@ -1,0 +1,8 @@
+{
+"voiceScript1": "Once upon a time, there was a baby show among the animals in the forest.",
+"voiceScript2": "Jupiter provided the prize and proud mammas from far and near brought their babies.",
+"voiceScript3": "But none got there earlier than Mother Monkey, who proudly presented her baby among the other contestants.",
+"voiceScript4": "As you can imagine, there was quite a laugh when the animals saw the ugly flat-nosed, hairless, pop-eyed little creature.",
+"voiceScript5": "\"Laugh if you will,\" said the Mother Monkey, \"Though Jupiter may not give him the prize, I know that he is the prettiest, the sweetest, the dearest darling in the world.\"",
+"voiceScript6": "Mother love is blind."
+}
