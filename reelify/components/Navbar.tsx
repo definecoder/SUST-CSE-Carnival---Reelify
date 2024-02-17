@@ -1,3 +1,4 @@
+
 import React from "react";
 
 
@@ -12,5 +13,7 @@ export const Navbar: React.FC = () => {
       <li>Contact</li>
     </ul>
   </div>
+
+    
   );
 };

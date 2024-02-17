@@ -1,30 +1,17 @@
-const fs = require("fs");
+const os = require("os");
 
-const path = require("path");
+// Get the network interfaces
+const networkInterfaces = os.networkInterfaces();
 
-// load assistant-message-1.txt
+// Extract the IPv4 address from the network interfaces
+const ipv4Addresses = [];
+for (const interfaceName in networkInterfaces) {
+  const interfaces = networkInterfaces[interfaceName];
+  for (const iface of interfaces) {
+    if (iface.family === "IPv4" && !iface.internal) {
+      ipv4Addresses.push(iface.address);
+    }
+  }
+}
 
-const assistantMessage1 = fs.readFileSync(
-  path.resolve(__dirname, "services/assistant-message-1.txt"),
-  "utf8"
-);
-
-let messages = JSON.parse(assistantMessage1);
-
-const scirpts = Object.values(messages);
-
-console.log(scirpts);
-
-// "audioUrls": [
-// "/Users/shawonmajid/Documents/Web/gpt/speeches/arfasd0.mp3",
-// "/Users/shawonmajid/Documents/Web/gpt/speeches/arfasd1.mp3",
-// "/Users/shawonmajid/Documents/Web/gpt/speeches/arfasd2.mp3",
-// "/Users/shawonmajid/Documents/Web/gpt/speeches/arfasd3.mp3",
-//
-// ]
-
-const url = "/Users/shawonmajid/Documents/Web/gpt/speeches/arfasd4.mp3";
-
-const fileName = url.split("/").at(-1);
-
-console.log(fileName);
+console.log("IPv4 Addresses:", ipv4Addresses[0]);

@@ -3,9 +3,9 @@ import React from "react";
 
 export const FeatureDescribe: React.FC = () => {
   return (
-    <div className="text-md flex">
+    <div className="text-md hidden sm:flex">
         <div className="ml-4">
-        🖼️  Dynamic Ai Builders
+        🖼️  Dynamic Video Using GPT-4
         </div>
         <div className="ml-4">
         💯 100% fully customizable

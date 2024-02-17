@@ -1,0 +1,67 @@
+body {
+    background-color: black;
+    width: 500px;
+    /* Adjust as needed */
+    height: 350px;
+    /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+}
+
+.large-text-field {
+    width: 400px;
+    /* Adjust as needed */
+    height: 250px;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    
+}
+
+.large-text-field::placeholder {
+    text-align: center;
+    
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.submit-button {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    margin: 20px;
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    border: none;
+}
+.submit-button:before{
+    height: 0%;
+    width: 2px;
+}
+.submit-button:hover{
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+
+}

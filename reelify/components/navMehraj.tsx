@@ -19,52 +19,51 @@ export default function NavBar() {
   const menuItems = [
     "Profile",
     "Dashboard",
-    "Activity",
+    "Services",
     "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
+    "Community",
+    "Settings",
+    "About Us",    
     "Help & Feedback",
     "Log Out",
   ];
 
   return (
     <NextUIProvider>
-      <Navbar onMenuOpenChange={setIsMenuOpen}>
+      <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden"
+            className="sm:hidden text-white"
           />
           <NavbarBrand>
-            <p className="font-bold text-inherit text-2xl">Re:elify</p>
+            <p className="font-bold text-white text-inherit text-2xl">Re:elify</p>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link className="text-white font-semibold -tracking-tight" href="#">
               Features
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#" aria-current="page">
-              Customers
+            <Link className="text-white font-semibold -tracking-tight" href="#" aria-current="page">
+              Community
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
-              Integrations
+            <Link className="text-white font-semibold -tracking-tight" href="#">
+              Pricing
             </Link>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
-            <Link href="#">Login</Link>
+            <Link className="text-white" href="#">Login</Link>
           </NavbarItem>
           <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
+            <Button as={Link} className="text-white" href="#" variant="flat">
               Sign Up
             </Button>
           </NavbarItem>

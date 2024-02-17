@@ -12,7 +12,7 @@ const Teamintro = () => {
         Our Team
       </div>
   <div className="container px-5 py-24 w-full mx-auto">
-    <div className="flex m-4">
+    <div className="sm:flex m-4">
       <div className="lg:w-1/3 lg:mb-0 mb-6 p-4 mx-4 bg-gray-950 bg-opacity-70">
         <div className="h-full text-center">
            <Image width={200} height={200} alt="testimonial" className="w-64 h-64 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src={shawonvai} /> 

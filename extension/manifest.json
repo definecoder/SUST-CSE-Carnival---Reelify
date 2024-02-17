@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Re:elify",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+     "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "reelify.png"   
+  }
+}
+
