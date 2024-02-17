@@ -16,11 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#050505]">                      
-        {children}                
+      <body className="bg-[#050505]">
+        {children}
         <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/212ee31b-c6da-4807-9f74-d174dbe25e5f/webchat/config.js" defer></script>
-        
+        <script
+          src="https://mediafiles.botpress.cloud/212ee31b-c6da-4807-9f74-d174dbe25e5f/webchat/config.js"
+          defer
+        ></script>
       </body>
     </html>
   );
