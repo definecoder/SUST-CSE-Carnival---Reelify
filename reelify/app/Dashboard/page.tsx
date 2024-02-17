@@ -1,17 +1,11 @@
 "use client"
 
 import { Player } from "@remotion/player";
-import React, { useMemo, useState } from "react";
-import { Main } from "../../remotion/MyComp/Main";
-import { z } from "zod";
-import { RenderControls } from "../../components/RenderControls";
-import { Navbar } from "../../components/Navbar";
+import React, { useMemo, useState, useRef } from "react";
+
 import { InputBox } from "../../components/Inputbox";
 import {
-  CompositionProps,
-  defaultMyCompProps,
-  DURATION_IN_FRAMES,
-  VIDEO_FPS,
+ 
   VIDEO_HEIGHT,
   VIDEO_WIDTH,
 } from "../../types/constants";
@@ -20,9 +14,11 @@ import "../../styles/global.css";
 import { FeatureDescribe } from "../../components/FeatureDescribe";
 import { StoryWithReq } from "../../remotion/MyComp/StoryWithReq";
 import { defaultVideoProps, scripts, images, audioes } from "../../types/videoprops";
-import { videoProps } from "../../types/videoprops";
 
 
+type AudioPlayerProps = {
+  audioUrl: string;
+};
 
 
 const Dashboard = () => {
@@ -51,17 +47,14 @@ const Dashboard = () => {
 
 
  const [audioUrls, setAudioUrls] = useState([
-  "http://10.100.161.49:3000/api/get-image/dino0.jpg",
-  "http://10.100.161.49:3000/api/get-image/dino1.jpg",
-  "http://10.100.161.49:3000/api/get-image/dino2.jpg",
-  "http://10.100.161.49:3000/api/get-image/dino3.jpg",
-  "http://10.100.161.49:3000/api/get-image/dino4.jpg",
-  "http://10.100.161.49:3000/api/get-image/dino5.jpg",
+  "http://10.100.161.49:3000/api/get-speech/dino0.mp3",
+  "http://10.100.161.49:3000/api/get-speech/dino1.mp3",
+  "http://10.100.161.49:3000/api/get-speech/dino2.mp3",
+  "http://10.100.161.49:3000/api/get-speech/dino3.mp3",
+  "http://10.100.161.49:3000/api/get-speech/dino4.mp3",
+  "http://10.100.161.49:3000/api/get-speech/dino5.mp3",
 
  ]);
-
-
-
 
   return (
     <div className="w-screen h-screen main">
@@ -83,6 +76,7 @@ const Dashboard = () => {
             setScripts={setVideoScript}
             setAudioUrls={setAudioUrls}
             setImages={setImageUrls}
+            audioUrls = {audioUrls}
             
             ></InputBox>
           </div>
@@ -115,8 +109,10 @@ const Dashboard = () => {
            
           />
           } */}
-
-{showReels &&  <Player
+        
+{showReels &&  
+<div>
+<Player
             component={StoryWithReq}
             durationInFrames={900}
             inputProps={{
@@ -128,11 +124,14 @@ const Dashboard = () => {
             compositionHeight={VIDEO_HEIGHT}
             compositionWidth={VIDEO_WIDTH}
             className="w-full rounded-2xl"
+            showVolumeControls
             controls
             autoPlay
             loop
            
           />
+          
+          </div>
           }
        
 
