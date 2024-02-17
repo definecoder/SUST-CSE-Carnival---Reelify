@@ -205,27 +205,33 @@ const Explore: NextPage = () => {
           className="bg-slate-800 flex-grow flex flex-wrap justify-start items-center overflow-scroll mb-4 sm:mb-0 gap-3"
           style={{ height: "calc(100vh - 64px)" }}
         >
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="cake.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
+          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
         </div>
       </div>
     </>
