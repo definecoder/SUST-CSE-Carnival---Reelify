@@ -11,8 +11,9 @@ So, for example, the structure will be the following for one story:
 .
 .
 
-If the text is very small, then elaborate so that at least 3 scripts are generated.
-If the text is very large, then summarize
+If the text is very small, then elaborate so that exactly 6 voice scripts are generated
+If the text is very large, then summarize so that exactly 6 voice scripts are generated
+All voice scripts must take exactly 5 seconds to speech. if one is larger than 5 second than make another small than 5 second, or vice verca. Ultimately I need 30 seconds of voice script
 Format all voice scripts in a json format. Also must separate each voice script using comma (,) 
 You Must Always Complete the response. You can summarise or elaborate if you need, but do not leave the response incomplete.
 

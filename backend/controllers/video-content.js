@@ -50,11 +50,19 @@ const getVideoContent = async (req, res) => {
     videoScript: voices,
     imageUrls,
     audioUrls,
+    finalAudioUrl,
+    imageScripts,
   });
 
   videoContent.save();
 
-  res.send({ videoScript: voices, imageUrls, audioUrls, finalAudioUrl });
+  res.send({
+    videoScript: voices,
+    imageUrls,
+    audioUrls,
+    finalAudioUrl,
+    imageScripts,
+  });
 };
 
 const getLatestVideoContent = async (req, res) => {

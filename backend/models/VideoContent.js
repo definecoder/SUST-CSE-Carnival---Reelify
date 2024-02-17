@@ -18,6 +18,14 @@ const videoContentSchema = new mongoose.Schema({
       type: String,
     },
   ],
+  imageScripts: [
+    {
+      type: String,
+    },
+  ],
+  finalAudioUrl: {
+    type: String,
+  },
 
   createdAt: {
     type: Date,

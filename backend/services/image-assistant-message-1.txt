@@ -5,6 +5,4 @@
 "imagePrompt4": "show a little lamb following the disguised wolf, unaware of the danger",
 "imagePrompt5": "show the disguised wolf entering the sheepfold with the flock",
 "imagePrompt6": "show the shepherd holding a knife, ready to make mutton broth",
-"imagePrompt7": "show the shepherd catching and killing the wolf in the sheepfold",
-"imagePrompt8": "show the wolf facing the consequences of his own deceit"
 }
