@@ -48,7 +48,7 @@ const getVideoPrompt = async (prompt) => {
 
   while (result.length < 2000) {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       messages: converstationHistory,
       temperature: 1,
       max_tokens: 256,
