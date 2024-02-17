@@ -20,7 +20,7 @@ const Community: NextPage = () => {
           style={{ height: "calc(100vh - 64px)" }}
         >
           <Button
-            className="text-xl p-6 mb-4 font-bold bg-transparent text-white"
+            className="text-xl p-6 mb-4 font-bold bg-transparent text-blue-400"
             startContent={<MdHome size={"1.5em"} />}
             variant="light"
           >
@@ -33,6 +33,8 @@ const Community: NextPage = () => {
           >
             Following
           </Button>
+          <Link href="/explore"> 
+            
           <Button
             className="text-xl p-6 mb-4 bg-transparent text-white"
             startContent={<FaCompass size={"1.3em"} />}
@@ -40,6 +42,7 @@ const Community: NextPage = () => {
           >
             Explore
           </Button>
+          </Link>
           <Button
             className="text-xl p-6 mb-8 bg-transparent text-white"
             startContent={<IoPersonCircleSharp size={"1.6em"} />}
