@@ -6,6 +6,7 @@ import { FeatureDescribe } from "../../components/FeatureDescribe";
 import Teamintro from "../../components/Teamintro";
 import Link from "next/link";
 import Navbar from "../../components/navMehraj";
+import Pricing from "../../components/pricing";
 
 const Homepage = () => {
   return (
@@ -42,11 +43,12 @@ const Homepage = () => {
             </button>
           </Link>
         </div>
-        <div className="text-white mt-12 sm:mb-[250px]">
+        <div className="text-white mt-12 sm:mb-[250px] mb-[300px]">
           <FeatureDescribe />
         </div>
-      </section>
+      </section>      
       <Teamintro />
+      <Pricing />
     </>
   );
 };
