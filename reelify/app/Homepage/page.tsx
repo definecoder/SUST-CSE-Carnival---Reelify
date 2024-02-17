@@ -7,6 +7,7 @@ import Teamintro from "../../components/Teamintro";
 import Link from "next/link";
 import Navbar from "../../components/navMehraj";
 import Pricing from "../../components/pricing";
+import Footer from "../../components/Footer";
 
 const Homepage = () => {
   return (
@@ -49,6 +50,7 @@ const Homepage = () => {
       </section>      
       <Teamintro />
       <Pricing />
+      <Footer />
     </>
   );
 };
