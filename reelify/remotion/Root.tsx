@@ -8,7 +8,10 @@ import {
   VIDEO_HEIGHT,
   VIDEO_WIDTH,
 } from "../types/constants";
+
+import { scripts, images, audioes } from "../types/videoprops";
 import { NextLogo } from "./MyComp/NextLogo";
+import { StoryWithReq } from "./MyComp/StoryWithReq";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -31,6 +34,19 @@ export const RemotionRoot: React.FC = () => {
         height={140}
         defaultProps={{
           outProgress: 0,
+        }}
+      />
+      <Composition
+        id="StoryWithReq"
+        component={StoryWithReq}
+        durationInFrames={900}
+        fps={30}
+        width={VIDEO_WIDTH}
+        height={VIDEO_HEIGHT}
+        defaultProps={{
+          videoScript: scripts,
+          imageUrls: images,
+          audioUrls: audioes
         }}
       />
     </>

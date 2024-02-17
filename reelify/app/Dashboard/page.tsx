@@ -18,17 +18,49 @@ import {
 import { MergeStory } from "../../remotion/MyComp/MergeStory";
 import "../../styles/global.css";
 import { FeatureDescribe } from "../../components/FeatureDescribe";
+import { StoryWithReq } from "../../remotion/MyComp/StoryWithReq";
+import { defaultVideoProps, scripts, images, audioes } from "../../types/videoprops";
+import { videoProps } from "../../types/videoprops";
+
+
 
 
 const Dashboard = () => {
 
-  const [text, setText] = useState<string>(defaultMyCompProps.title);  
+  const [showReels, setShowReels] = useState(false);
+   const [videoScript, setVideoScript] = useState([
+  "Boss are a diverse group of reptiles belonging to the clade Dinosauria.",
+  "Boss first appeared during the Triassic period, between 243 and 233.23 million years ago, although the exact origin and timing of their evolution is still under active research.",
+  "Boss the Triassic-Jurassic extinction event around 201.3 million years ago, dinosaurs became the dominant terrestrial vertebrates.",
+  "Boss dominance continued throughout the Jurassic and Cretaceous periods.",
+  "Boss fossil record shows that birds are feathered dinosaurs, originating from earlier theropods during the Late Jurassic epoch.",
+  "Boss are the only dinosaur lineage known to have survived the Cretaceous-Paleogene extinction event around 66 million years ago.",
+  
 
-  const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
-    return {
-      title: text,
-    };
-  }, [text]);
+ ]);
+
+ const [imageUrls, setImageUrls] = useState([
+  "http://10.100.161.49:3000/api/get-image/dino0.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino1.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino2.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino3.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino4.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino5.jpg",
+ 
+ ]);
+
+
+ const [audioUrls, setAudioUrls] = useState([
+  "http://10.100.161.49:3000/api/get-image/dino0.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino1.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino2.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino3.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino4.jpg",
+  "http://10.100.161.49:3000/api/get-image/dino5.jpg",
+
+ ]);
+
+
 
 
   return (
@@ -46,7 +78,13 @@ const Dashboard = () => {
 
           </div>
           <div className=" font-bold">
-            <InputBox></InputBox>
+            <InputBox 
+            setShowReels={setShowReels} 
+            setScripts={setVideoScript}
+            setAudioUrls={setAudioUrls}
+            setImages={setImageUrls}
+            
+            ></InputBox>
           </div>
           <div className="mt-6">
             <FeatureDescribe></FeatureDescribe>
@@ -62,8 +100,9 @@ const Dashboard = () => {
 
         <div className='w-[400px] m-8'>
         <div className="rounded-md shadow-2xl mb-10 mt-12" >
-          
-        <Player
+
+        
+          {/* {showReels &&  <Player
             component={MergeStory}
             durationInFrames={1050}
             fps={30}
@@ -75,6 +114,27 @@ const Dashboard = () => {
             loop
            
           />
+          } */}
+
+{showReels &&  <Player
+            component={StoryWithReq}
+            durationInFrames={900}
+            inputProps={{
+              videoScript: videoScript,
+          imageUrls: imageUrls,
+          audioUrls: audioUrls
+            }}
+            fps={30}
+            compositionHeight={VIDEO_HEIGHT}
+            compositionWidth={VIDEO_WIDTH}
+            className="w-full rounded-2xl"
+            controls
+            autoPlay
+            loop
+           
+          />
+          }
+       
 
           </div>
          
