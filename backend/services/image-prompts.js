@@ -2,6 +2,10 @@ const { OpenAI } = require("openai");
 // read file for content
 const fs = require("fs");
 const path = require("path");
+const dotenv = require("dotenv");
+dotenv.config();
+
+console.log("API: " + process.env.OPENAI_API_KEY);
 
 // load system-message.txt
 const systemMessage = fs.readFileSync(

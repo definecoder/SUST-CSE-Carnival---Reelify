@@ -1,4 +1,4 @@
-
+import {  uri } from './Constants'; 
 
 export const postForm = async (
   name: string,
@@ -7,7 +7,7 @@ export const postForm = async (
   description: string
 ) => {
   try {
-    const uri = 'http://localhost:8080';
+   
 
     const data = { name, phone, category, description };
 
@@ -36,7 +36,7 @@ export const postForm = async (
 
 export const getProducts = async () => {
   try {
-    const uri = 'http://localhost:8080';
+   
     const response = await fetch(`${uri}/api/product/`, {
       method: "GET",
       headers: {
@@ -56,5 +56,37 @@ export const getProducts = async () => {
     console.error("Error:", error);
     // You might want to throw the error or handle it in some other way
     throw error;
+  }
+};
+
+
+export const postReelsText = async (
+  text: string,
+  
+) => {
+  try {
+  
+
+    const data = { text };
+
+    const response = await fetch(`${uri}/api/get-video-content/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+      console.log(response.body);
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error);
+
   }
 };
