@@ -4,6 +4,7 @@ const { getImage } = require("../services/image");
 const { getSpeech } = require("../services/text-to-speech");
 const { getIPAddress } = require("../services/ip4address");
 const VideoContents = require("../models/VideoContent");
+const { mergeFiles } = require("../services/mergefiles");
 
 const ipAddress = getIPAddress();
 const baseImageUrl = "http://" + ipAddress + ":3000/api/get-image/";
@@ -41,6 +42,10 @@ const getVideoContent = async (req, res) => {
     audioUrls.push(baseAudioUrl + audioId + i + ".mp3");
   }
 
+  await mergeFiles(audioUrls, audioId);
+  const finalAudioUrl =
+    "http://" + ipAddress + ":3000/api/get-audio/" + audioId + ".mp3";
+
   const videoContent = new VideoContents({
     videoScript: voices,
     imageUrls,
@@ -49,7 +54,7 @@ const getVideoContent = async (req, res) => {
 
   videoContent.save();
 
-  res.send({ videoScript: voices, imageUrls, audioUrls });
+  res.send({ videoScript: voices, imageUrls, audioUrls, finalAudioUrl });
 };
 
 const getLatestVideoContent = async (req, res) => {

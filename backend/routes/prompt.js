@@ -1,5 +1,5 @@
 const express = require("express");
-const { serveSpeech } = require("../services/text-to-speech");
+const { serveSpeech, serveMergedAudio } = require("../services/text-to-speech");
 const {
   getVideoContent,
   getLatestVideoContent,
@@ -11,5 +11,6 @@ router.route("/get-video-content").post(getVideoContent);
 router.route("/get-speech/:link").get(serveSpeech);
 router.route("/get-image/:link").get(serveImage);
 router.route("/get-latest-video-content").get(getLatestVideoContent);
+router.route("/get-audio/:link").get(serveMergedAudio);
 
 module.exports = router;

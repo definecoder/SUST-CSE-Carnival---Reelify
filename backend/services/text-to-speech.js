@@ -36,4 +36,10 @@ const serveSpeech = (req, res) => {
   });
 };
 
-module.exports = { getSpeech, serveSpeech };
+const serveMergedAudio = (req, res) => {
+  res.sendFile("./final_audio/" + req.params.link, {
+    root: __dirname + "/..",
+  });
+};
+
+module.exports = { getSpeech, serveSpeech, serveMergedAudio };
