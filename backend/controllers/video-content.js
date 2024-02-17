@@ -13,7 +13,7 @@ const getVideoContent = async (req, res) => {
   const { text } = req.body;
   // generate random Audio and Image Id alphanumeric string
   const audioId = Math.random().toString(36).substring(7);
-  const imageId = Math.random().toString(36).substring(7);
+  const imageId = audioId;
 
   console.log("api hit, getting voice script");
 
@@ -30,14 +30,14 @@ const getVideoContent = async (req, res) => {
 
   for (let i = 0; i < imageScripts.length; i++) {
     console.log("getting image " + i);
-    const fileName = await getImage(imageScripts[i], imageId, i);
+    await getImage(imageScripts[i], imageId, i);
     imageUrls.push(baseImageUrl + imageId + i + ".jpg");
   }
 
   for (let i = 0; i < voices.length; i++) {
     console.log("getting voice " + i);
-    const audioUrl = await getSpeech(voices[i], audioId, i);
-    const fileName = audioUrl.split("/").at(-1);
+    await getSpeech(voices[i], audioId, i);
+
     audioUrls.push(baseAudioUrl + audioId + i + ".mp3");
   }
 
