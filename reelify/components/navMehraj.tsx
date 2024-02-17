@@ -37,7 +37,9 @@ export default function NavBar() {
             className="sm:hidden text-white"
           />
           <NavbarBrand>
+            <a href="/">
             <p className="font-bold text-white text-inherit text-2xl">Re:elify</p>
+            </a>
           </NavbarBrand>
         </NavbarContent>
 
