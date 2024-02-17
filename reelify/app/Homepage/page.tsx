@@ -34,11 +34,11 @@ const Homepage = () => {
           </p>
           <Link href="/Dashboard/">
             <button className=" font-poppins px-5 py-2 m-8 text-xl bg-transparent text-white outline-none border-2 border-current rounded-md transition-all duration-300 font-semibold hover:bg-white hover:text-black">
-              Join Us
+              GENERATE NOW
             </button>
           </Link>
 
-          <Link href="/products/">
+          <Link href="/explore/">
             <button className="ont-poppins px-5 py-2 m-8 text-xl bg-blue-400 text-black outline-none border-2 border-black rounded-md transition-all duration-300 font-semibold hover:bg-black hover:text-blue-300 ">
               EXPLORE
             </button>
