@@ -31,7 +31,7 @@ const getVideoContent = async (req, res) => {
 
   for (let i = 0; i < imageScripts.length; i++) {
     console.log("getting image " + i);
-    await getImage(imageScripts[i], imageId, i);
+    getImage(imageScripts[i], imageId, i);
     imageUrls.push(baseImageUrl + imageId + i + ".jpg");
   }
 
@@ -56,13 +56,15 @@ const getVideoContent = async (req, res) => {
 
   videoContent.save();
 
-  res.send({
-    videoScript: voices,
-    imageUrls,
-    audioUrls,
-    finalAudioUrl,
-    imageScripts,
-  });
+  setTimeout(() => {
+    res.send({
+      videoScript: voices,
+      imageUrls,
+      audioUrls,
+      finalAudioUrl,
+      imageScripts,
+    });
+  }, 10000);
 };
 
 const getLatestVideoContent = async (req, res) => {
