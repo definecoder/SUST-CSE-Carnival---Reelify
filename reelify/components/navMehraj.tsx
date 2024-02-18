@@ -55,8 +55,8 @@ export default function NavBar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className="text-white font-semibold -tracking-tight" href="#">
-              Pricing
+            <Link className="text-white font-semibold -tracking-tight" href="http://localhost:5173" target="_blank">
+              Remaster
             </Link>
           </NavbarItem>
         </NavbarContent>
