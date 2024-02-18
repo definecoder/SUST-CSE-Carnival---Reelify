@@ -205,33 +205,141 @@ const Explore: NextPage = () => {
           className="bg-slate-800 flex-grow flex flex-wrap justify-start items-center overflow-scroll mb-4 sm:mb-0 gap-3"
           style={{ height: "calc(100vh - 64px)" }}
         >
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="0.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="1.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="2.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="3.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="4.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="5.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="6.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="7.mp4" />
-          <ExploreCard username="mehraj" imgLink="https://i.pravatar.cc/150?u=b042581f4e29026024d" videoLink="8.mp4" />
+          <ExploreCard
+            username="john_doe"
+            imgLink="https://i.pravatar.cc/150?img=3"
+            videoLink="0.mp4"
+          />
+          <ExploreCard
+            username="jane_smith"
+            imgLink="https://i.pravatar.cc/150?img=4"
+            videoLink="1.mp4"
+          />
+          <ExploreCard
+            username="alex_jackson"
+            imgLink="https://i.pravatar.cc/150?img=5"
+            videoLink="2.mp4"
+          />
+          <ExploreCard
+            username="emily_white"
+            imgLink="https://i.pravatar.cc/150?img=6"
+            videoLink="3.mp4"
+          />
+          <ExploreCard
+            username="samuel_brown"
+            imgLink="https://i.pravatar.cc/150?img=7"
+            videoLink="4.mp4"
+          />
+          <ExploreCard
+            username="olivia_taylor"
+            imgLink="https://i.pravatar.cc/150?img=8"
+            videoLink="5.mp4"
+          />
+          <ExploreCard
+            username="nathan_green"
+            imgLink="https://i.pravatar.cc/150?img=9"
+            videoLink="6.mp4"
+          />
+          <ExploreCard
+            username="lily_martin"
+            imgLink="https://i.pravatar.cc/150?img=10"
+            videoLink="7.mp4"
+          />
+          <ExploreCard
+            username="david_white"
+            imgLink="https://i.pravatar.cc/150?img=11"
+            videoLink="8.mp4"
+          />
+          <ExploreCard
+            username="grace_miller"
+            imgLink="https://i.pravatar.cc/150?img=12"
+            videoLink="0.mp4"
+          />
+          <ExploreCard
+            username="max_carter"
+            imgLink="https://i.pravatar.cc/150?img=13"
+            videoLink="1.mp4"
+          />
+          <ExploreCard
+            username="sophia_hill"
+            imgLink="https://i.pravatar.cc/150?img=14"
+            videoLink="2.mp4"
+          />
+          <ExploreCard
+            username="leo_jones"
+            imgLink="https://i.pravatar.cc/150?img=1"
+            videoLink="3.mp4"
+          />
+          <ExploreCard
+            username="ava_smith"
+            imgLink="https://i.pravatar.cc/150?img=2"
+            videoLink="4.mp4"
+          />
+          <ExploreCard
+            username="mason_taylor"
+            imgLink="https://i.pravatar.cc/150?img=15"
+            videoLink="5.mp4"
+          />
+          <ExploreCard
+            username="mia_brown"
+            imgLink="https://i.pravatar.cc/150?img=16"
+            videoLink="6.mp4"
+          />
+          <ExploreCard
+            username="owen_white"
+            imgLink="https://i.pravatar.cc/150?img=17"
+            videoLink="7.mp4"
+          />
+          <ExploreCard
+            username="zoey_jackson"
+            imgLink="https://i.pravatar.cc/150?img=18"
+            videoLink="8.mp4"
+          />
+          <ExploreCard
+            username="ethan_martin"
+            imgLink="https://i.pravatar.cc/150?img=19"
+            videoLink="0.mp4"
+          />
+          <ExploreCard
+            username="ella_green"
+            imgLink="https://i.pravatar.cc/150?img=20"
+            videoLink="1.mp4"
+          />
+          <ExploreCard
+            username="liam_carter"
+            imgLink="https://i.pravatar.cc/150?img=21"
+            videoLink="2.mp4"
+          />
+          <ExploreCard
+            username="isabella_hill"
+            imgLink="https://i.pravatar.cc/150?img=22"
+            videoLink="3.mp4"
+          />
+          <ExploreCard
+            username="jacob_jones"
+            imgLink="https://i.pravatar.cc/150?img=23"
+            videoLink="4.mp4"
+          />
+          <ExploreCard
+            username="sophie_taylor"
+            imgLink="https://i.pravatar.cc/150?img=24"
+            videoLink="5.mp4"
+          />
+          <ExploreCard
+            username="noah_brown"
+            imgLink="https://i.pravatar.cc/150?img=25"
+            videoLink="6.mp4"
+          />
+          <ExploreCard
+            username="chloe_martin"
+            imgLink="https://i.pravatar.cc/150?img=26"
+            videoLink="7.mp4"
+          />
+          <ExploreCard
+            username="ryan_smith"
+            imgLink="https://i.pravatar.cc/150?img=27"
+            videoLink="8.mp4"
+          />
         </div>
       </div>
     </>

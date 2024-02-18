@@ -69,7 +69,7 @@ export const postReelsText = async (
 
     const data = { text };
 
-    const response = await fetch(`${uri}/api/get-video-content/`, {
+    const response = await fetch(`${uri}/api/get-video-content`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

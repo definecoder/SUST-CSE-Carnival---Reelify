@@ -22,7 +22,7 @@ const Title = styled.div`
   font-weight: 700;
   text-align: center;
   position: absolute;
-  top: 700px;
+  top: 600px;
   width: 100%;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
   padding-left: 50px;
@@ -31,6 +31,7 @@ const Title = styled.div`
   text-stroke: 1px black; 
 font-style: normal;
 line-height: normal;
+ background-color: rgba(0, 0, 0, 0.235);
 
 `;
 

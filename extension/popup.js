@@ -14,7 +14,7 @@ button.addEventListener("click", function (e) {
   // Now I want to route to another page and pass the value of text to that page
   chrome.tabs.create(
     {
-      url: "destination_page.html", // URL of the destination page
+      url: `http://localhost:3000/Dashboard?text=${text.value}`, // URL of the destination page
       active: true,
     },
     function (tab) {
