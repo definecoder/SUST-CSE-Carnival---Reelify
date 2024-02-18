@@ -12,6 +12,7 @@ import {
 import { scripts, images, audioes } from "../types/videoprops";
 import { NextLogo } from "./MyComp/NextLogo";
 import { StoryWithReq } from "./MyComp/StoryWithReq";
+import { MergeStory } from "./MyComp/MergeStory";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={defaultMyCompProps}
       />
       <Composition
-        id="NextLogo"
+        id="myReel"
         component={NextLogo}
         durationInFrames={300}
         fps={30}
@@ -36,6 +37,7 @@ export const RemotionRoot: React.FC = () => {
           outProgress: 0,
         }}
       />
+    
       <Composition
         id="StoryWithReq"
         component={StoryWithReq}

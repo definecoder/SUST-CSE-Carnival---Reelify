@@ -3,6 +3,9 @@
 import { Player } from "@remotion/player";
 import React, { useMemo, useState, useRef } from "react";
 
+import Image from 'next/image';
+import loading from '../../public/loading.gif';
+import { IoReloadCircleSharp } from "react-icons/io5";
 import { InputBox } from "../../components/Inputbox";
 import {
  
@@ -16,6 +19,8 @@ import { StoryWithReq } from "../../remotion/MyComp/StoryWithReq";
 import { defaultVideoProps, scripts, images, audioes } from "../../types/videoprops";
 
 
+
+
 type AudioPlayerProps = {
   audioUrl: string;
 };
@@ -24,6 +29,12 @@ type AudioPlayerProps = {
 const Dashboard = () => {
 
   const [showReels, setShowReels] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
+  const [reload, setReload] = useState(true);
+  const [audioString, setAudioString] = useState('');
+
+
+
    const [videoScript, setVideoScript] = useState([
   "Boss are a diverse group of reptiles belonging to the clade Dinosauria.",
   "Boss first appeared during the Triassic period, between 243 and 233.23 million years ago, although the exact origin and timing of their evolution is still under active research.",
@@ -53,15 +64,32 @@ const Dashboard = () => {
   "http://10.100.161.49:3000/api/get-speech/dino3.mp3",
   "http://10.100.161.49:3000/api/get-speech/dino4.mp3",
   "http://10.100.161.49:3000/api/get-speech/dino5.mp3",
-
  ]);
 
+
+ const handleButtonClick = async () => {
+        setReload(false);
+       
+        
+
+
+ };
+
+ const playAgainClick = async () => {
+  setReload(true);
+  const audioElements: HTMLAudioElement[] = [];
+  const audioElement = new Audio(audioString); 
+  audioElements.push(audioElement);
+  
+ audioElements[0].play();
+ };
+
   return (
-    <div className="w-screen h-screen main">
+    <div className="w-screen h-[1200px] main">
      
       
-      <div className="w-screen h-screen flex ">
-        <div className="text-white w-4/6 h-scree p-24  flex flex-col text-center items-center">
+      <div className="w-screen h-[1200px] flex ">
+        <div className="text-white w-3/5 h-screen p-24  flex flex-col text-center items-center">
           <div className="text-7xl  font-bold">
           AI Reels Generator
           </div>
@@ -77,6 +105,8 @@ const Dashboard = () => {
             setAudioUrls={setAudioUrls}
             setImages={setImageUrls}
             audioUrls = {audioUrls}
+            setShowLoading={setShowLoading}
+            setAudioString={setAudioString}
             
             ></InputBox>
           </div>
@@ -86,7 +116,7 @@ const Dashboard = () => {
           
         </div>
         
-        <div className="w-2/6 h-screen ">
+        <div className="w-2/5 h-screen ">
 
           
        
@@ -112,6 +142,8 @@ const Dashboard = () => {
         
 {showReels &&  
 <div>
+{reload && <div >
+         
 <Player
             component={StoryWithReq}
             durationInFrames={900}
@@ -127,12 +159,24 @@ const Dashboard = () => {
             showVolumeControls
             controls
             autoPlay
-            loop
+            // loop
            
           />
+           <button onClick={handleButtonClick}  className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-[#00bfff] hover:bg-gradient-to-r hover:from-black hover:via-gray-600 hover:to-gray-200 h-[50px] w-[100px] rounded-lg m-6 text-[18px] text-white   hover:text-white"><IoReloadCircleSharp /> Stop</button>
+   
           
-          </div>
+           </div>
+            }
+         {(reload==false) && <div className="h-[887px] w-[473px]"><div className="h-[837px] w-[473px]"></div><button onClick={playAgainClick}  className="bg-gradient-to-r from-indigo-500 via-purple-500 to-[#00bfff] hover:bg-gradient-to-r hover:from-black hover:via-gray-600 hover:to-gray-200 h-[50px] w-[100px] rounded-lg m-6 text-[18px] text-white   hover:text-white"><IoReloadCircleSharp />Play Again</button>
+         </div> }
+</div>
+
           }
+
+{showLoading &&  
+      <Image width={473} height={837}  alt="testimonial" className="rounded-md" src={loading}/>
+          }
+          
        
 
           </div>

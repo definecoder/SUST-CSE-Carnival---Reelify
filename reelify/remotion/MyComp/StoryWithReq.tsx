@@ -5,6 +5,7 @@ import { Story2 } from "./Story";
 import React, { useState, useEffect } from 'react';
 import {  uri } from "../../components/Constants"; 
 import { myVideoProps } from "../../types/videoprops"; 
+import { AudioListen } from "./AudioListen"; 
 
 
 
@@ -74,15 +75,6 @@ export const StoryWithReq: React.FC<MyComponentProps> = ({ videoScript,imageUrls
 //  ]);
 
 
-//  const [audioUrls, setAudioUrls] = useState([
-//   "http://10.100.161.49:3000/api/get-image/dino0.jpg",
-//   "http://10.100.161.49:3000/api/get-image/dino1.jpg",
-//   "http://10.100.161.49:3000/api/get-image/dino2.jpg",
-//   "http://10.100.161.49:3000/api/get-image/dino3.jpg",
-//   "http://10.100.161.49:3000/api/get-image/dino4.jpg",
-//   "http://10.100.161.49:3000/api/get-image/dino5.jpg",
-
-//  ]);
 
 
 // const videoScriptArray = Object.values(data.videoScript);
@@ -122,9 +114,9 @@ export const StoryWithReq: React.FC<MyComponentProps> = ({ videoScript,imageUrls
     </Sequence> */}
    
     
-    {/* <Sequence from={0} durationInFrames={1200}>
+    <Sequence from={0} durationInFrames={900}>
        <AudioListen></AudioListen>
-    </Sequence> */}
+    </Sequence>
     </>
     
   );

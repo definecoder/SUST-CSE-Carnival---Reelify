@@ -2,17 +2,20 @@ import React, { useState } from 'react';
 import { postReelsText } from './Utils';
 import { myVideoProps } from '../types/videoprops'; 
 import { defaultVideoProps } from '../types/videoprops';
-import { z } from "zod";
+import { set, z } from "zod";
 import { videoProps } from '../types/videoprops'
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from '@nextui-org/react';
 
 type MyComponentProps = {
   setShowReels: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setScripts: React.Dispatch<React.SetStateAction<string[]>>;
   setAudioUrls: React.Dispatch<React.SetStateAction<string[]>>;
   setImages: React.Dispatch<React.SetStateAction<string[]>>;
+  setAudioString: React.Dispatch<React.SetStateAction<string>>;
   audioUrls: string[]
+  
  
 };
 
@@ -45,33 +48,12 @@ const playAudio = (audioUrls: string[]) => {
 
 
 
-
-  // audioElements[0].play();
-  
-  // const timeoutId = setTimeout(() => {
-  //  console.log("2 is done");
-  //  audioElements[0].pause();
-  //  audioElements[1].play();
-  // }, 5000);
-
-  // const timeoutId1 = setTimeout(() => {
-   
-  //   audioElements[1].pause();
-  //   audioElements[2].play();
-  // }, 10000);
-
-
-  // const timeoutId3 = setTimeout(() => {
-  //   audioElements[2].pause();
-  //   audioElements[3].play();
-  // }, 15000);
-
-
 };
 
-export const InputBox: React.FC<MyComponentProps> = ({ setShowReels, setScripts, setAudioUrls, setImages, audioUrls  }) => {
+export const InputBox: React.FC<MyComponentProps> = ({ setShowReels, setScripts, setAudioUrls, setImages, audioUrls, setShowLoading, setAudioString  }) => {
 
   const [reelsText, setReelsText] = useState('');
+  const [showButton, setShowButton] = useState(true);
   // const audioUrl = "http://10.100.161.49:3000/api/get-speech/dino0.mp3";
 
   // const audioUrls =  [
@@ -88,7 +70,15 @@ export const InputBox: React.FC<MyComponentProps> = ({ setShowReels, setScripts,
 
 
   const handleButtonClick = async () => {
+
+    
+       
+
+
+
     console.log(reelsText);
+    setShowLoading(true);
+    setShowButton(false);
 
     try{
       console.log('response done');
@@ -103,6 +93,7 @@ export const InputBox: React.FC<MyComponentProps> = ({ setShowReels, setScripts,
      const videoScriptArray = response.videoScript;
 const imageUrlsArray = response.imageUrls;
 const audioUrlsArray = response.audioUrls;
+const audioString = response.finalAudioUrl;
 
 console.log("Video Script Array:", videoScriptArray);
 console.log("Image URLs Array:", imageUrlsArray);
@@ -110,11 +101,21 @@ console.log("Audio URLs Array:", audioUrlsArray);
       setScripts(videoScriptArray);
       setAudioUrls(audioUrlsArray);
       setImages(imageUrlsArray);
+      setAudioString(audioString);
 
+
+      setShowLoading(false);
       setShowReels(true);
+      setShowButton(true);
+      const audioElements: HTMLAudioElement[] = [];
+      const audioElement = new Audio(response.finalAudioUrl); 
+      audioElements.push(audioElement);
+audioElements[0].play();
+
+
      // console.log('Response:', response);
       console.log('response done');
-      playAudio(audioUrlsArray);
+     // playAudio(audioUrlsArray);
 
     }catch(e){
       console.error('Error:', e);
@@ -134,7 +135,12 @@ console.log("Audio URLs Array:", audioUrlsArray);
   ></textarea>
 
 </div>
-    <button onClick={handleButtonClick} className="bg-gradient-to-r from-indigo-500 via-purple-500 to-[#00bfff] hover:bg-gradient-to-r hover:from-black hover:via-gray-600 hover:to-gray-200 h-[50px] w-[200px] rounded-xl m-9 text-[24px] text-white   hover:text-white">🚀 Generate</button>
+
+  {showButton && <button onClick={handleButtonClick} className="bg-gradient-to-r from-indigo-500 via-purple-500 to-[#00bfff] hover:bg-gradient-to-r hover:from-black hover:via-gray-600 hover:to-gray-200 h-[50px] w-[200px] rounded-xl m-9 text-[24px] text-white   hover:text-white">🚀 Generate</button>
+    }
+     {(showButton==false) && <button className=" bg-gradient-to-r from-black via-gray-600 to-gray-200 h-[50px] w-[200px] rounded-xl m-9 text-[24px] text-white   ">🚀 Generate</button>
+    }
+
     
     </div>
    
