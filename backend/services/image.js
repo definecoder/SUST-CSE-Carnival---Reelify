@@ -3,6 +3,8 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs");
 
+// console.log(process.env.OPENAI_API_KEY);
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
