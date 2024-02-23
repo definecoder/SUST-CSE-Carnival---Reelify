@@ -64,7 +64,7 @@ const getVideoContent = async (req, res) => {
       finalAudioUrl,
       imageScripts,
     });
-  }, 10000);
+  }, 15000);
 };
 
 const getLatestVideoContent = async (req, res) => {
