@@ -29,17 +29,14 @@ export default function GetCarts() {
   return (
     <div className='flex flex-wrap'>
       {data && data.map((product, index) => (
-         <div className="w-1/4 min-h-min text-gray-600 body-font mx-12 my-24">
-               <Cart
-          key={index} // Add a unique key prop
-          name={product.name}
-          phone={product.phone}
-          category={product.category}
-          description={product.description}
-        />
-             
-         </div>
-       
+        <div className="w-1/4 min-h-min text-gray-600 body-font mx-12 my-24" key={index}>
+          <Cart
+            name={product.name}
+            phone={product.phone}
+            category={product.category}
+            description={product.description}
+          />
+        </div>
       ))}
     </div>
   );
