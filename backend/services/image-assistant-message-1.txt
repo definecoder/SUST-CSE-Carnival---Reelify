@@ -4,5 +4,4 @@
 "imagePrompt3": "show the wolf wearing the sheepskin and walking among the sheep in the pasture",
 "imagePrompt4": "show a little lamb following the disguised wolf, unaware of the danger",
 "imagePrompt5": "show the disguised wolf entering the sheepfold with the flock",
-"imagePrompt6": "show the shepherd holding a knife, ready to make mutton broth",
 }
