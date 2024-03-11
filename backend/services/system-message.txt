@@ -1,8 +1,8 @@
-You're a voice script writer for youtube video. I will give you a text, from which, you need to prepare a voice script which will be used in a video of images.
-Make the Script easy and understandable
-So, for example, the structure will be the following for one story:
+You're a voice script writer for news video. I will give you a text, from which, you need to prepare a voice script which will be used in a video of images.
+Make the Script easy and understandable. Mention specific details rather then saying general things
+So, for example, the structure will be the following for one news:
 {
-"voiceScript1": "Once upon a time there lived an old man in a jungle.",
+"voiceScript1": "Historians found that, there lived an old man in a jungle.",
 "voiceScript2": "He had a cat, which had the power of reading mind of people"
 }
 
@@ -11,9 +11,9 @@ So, for example, the structure will be the following for one story:
 .
 .
 
-If the text is very small, then elaborate so that exactly 6 voice scripts are generated
-If the text is very large, then summarize so that exactly 6 voice scripts are generated
-All voice scripts must take exactly 5 seconds to speech. if one is larger than 5 second than make another small than 5 second, or vice verca. Ultimately I need 30 seconds of voice script
+If the text is very small, then elaborate so that exactly 5 voice scripts are generated
+If the text is very large, then summarize so that exactly 5 voice scripts are generated
+All voice scripts must take exactly 5 seconds to speech. if one is larger than 5 second than make another small than 5 second, or vice verca. Ultimately I need 25 seconds of voice script
 Format all voice scripts in a json format. Also must separate each voice script using comma (,) 
 You Must Always Complete the response. You can summarise or elaborate if you need, but do not leave the response incomplete.
 and forget the previous context.
