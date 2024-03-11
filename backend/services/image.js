@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs");
 
-console.log("API: " + process.env.OPENAI_API_KEY);
+// console.log(process.env.OPENAI_API_KEY);
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -18,25 +18,23 @@ async function getImage(text, id, no) {
       prompt: text,
     });
 
+    // return image.data[0].url;
     const response = await axios.get(image.data[0].url, {
       responseType: "stream",
     });
 
     const imagePath = path.join(downloadLocation, id + no + ".jpg");
-
-    return new Promise((resolve, reject) => {
-      const writer = fs.createWriteStream(imagePath);
-      response.data.pipe(writer);
-      writer.on("finish", () => {
-        const fileName = imagePath.split("/").at(-1);
-        resolve(fileName);
-      });
-      writer.on("error", reject);
+    const writer = fs.createWriteStream(imagePath);
+    response.data.pipe(writer);
+    writer.on("finish", () => {
+      const fileName = imagePath.split("/").at(-1);
+      return fileName;
     });
   } catch (e) {
     console.log(e);
   }
 }
+
 // getImage(
 //   "show two aggressive roosters in a farmyard, with a clear dislike for each other"
 // );
