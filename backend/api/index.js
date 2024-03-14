@@ -1,11 +1,11 @@
 const express = require("express");
-const prompts = require("./routes/prompt");
+const prompts = require("../routes/prompt");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const VideoContents = require("./models/VideoContent");
+const VideoContents = require("../models/VideoContent");
 dotenv.config();
 
-const dbUrl = require("./db/database").dbUrl;
+const dbUrl = require("../db/database").dbUrl;
 
 mongoose
   .connect(dbUrl)
@@ -97,3 +97,5 @@ app.use("/api", prompts);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
