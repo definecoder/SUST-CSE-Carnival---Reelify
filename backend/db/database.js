@@ -1,2 +1,5 @@
-dbUrl = `mongodb://127.0.0.1:27017/reelify`;
+const dotenv = require("dotenv");
+dotenv.config();
+
+dbUrl = process.env.MONGO_URI;
 module.exports = { dbUrl };

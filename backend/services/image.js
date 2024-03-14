@@ -10,6 +10,10 @@ const openai = new OpenAI({
 });
 
 const downloadLocation = `${__dirname}/../images`;
+// if images folder does not exist, create it
+if (!fs.existsSync(downloadLocation)) {
+  fs.mkdirSync(downloadLocation);
+}
 
 async function getImage(text, id, no) {
   try {

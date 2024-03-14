@@ -10,6 +10,12 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// check if speeches folder exists, if not create it
+const speechLocation = `${__dirname}/../speeches`;
+if (!fs.existsSync(speechLocation)) {
+  fs.mkdirSync(speechLocation);
+}
+
 async function getSpeech(text, id, no) {
   const speechFile = path.resolve("./speeches/" + id + no + ".mp3");
   const mp3 = await openai.audio.speech.create({
