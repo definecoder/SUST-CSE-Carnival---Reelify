@@ -1,7 +1,8 @@
 # Reels Video Generator from Text Prompt
 
 Welcome to the Reels Video Generator! This project transforms text prompts into engaging Reel videos using GPT-4 and various web technologies.
-LIVE AT: [https://re-elify.onrender.com/](https://re-elify.onrender.com/)
+<br>
+LIVE AT: [https://re-elify.onrender.com/](https://re-elify.onrender.com/) It may take some loading for the first time.
 
 ## Table of Contents
 - [Overview](#overview)
